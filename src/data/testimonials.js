@@ -12,12 +12,6 @@ export const testimonials = [
     attribution: 'New York Times Bestselling Author',
   },
   {
-    quote:
-      'Even tech support couldn’t fix it. I was losing hope (and sleep) over a gnarly audio issue with my live streaming. Then along came Vicky Lashenko (cue the uplifting music). Do not let this woman’s warm, sweet, southern manner fool you: Vicky is a tigress when it comes to pouncing on issues. She is relentless. Your issue becomes her issue, and she won’t stop hunting until she’s wrestled it to the ground. Do you want to get serious about live streaming? Then make sure Vicky Lashenko is your guide in the wild world of going live.',
-    name: 'Natalie MacLean',
-    attribution: 'Canada’s #1 Wine Expert, Author and Entrepreneur',
-  },
-  {
     quote: '….Think of Vicky as an affordable Gary Vaynerchuk!',
     name: 'Christopher Hudson',
     attribution: 'Bestselling Author and Consulting Editor',

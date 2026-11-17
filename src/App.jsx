@@ -209,8 +209,7 @@ function Testimonials() {
           <p className="section__eyebrow">Proof</p>
           <h2 className="section__title">What clients say</h2>
           <p className="section__lede">
-            Real words from people I’ve worked with over the years, quoted as they appeared on the original
-            About page.
+            Real words from people I’ve worked with over the years.
           </p>
         </Reveal>
 
