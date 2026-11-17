@@ -79,11 +79,6 @@ function Nav() {
             </a>
           </li>
           <li>
-            <a href="#approach" onClick={close}>
-              Focus
-            </a>
-          </li>
-          <li>
             <a href="#testimonials" onClick={close}>
               Testimonials
             </a>
@@ -150,50 +145,6 @@ function About() {
             brands who want a plan they can actually follow.
           </p>
         </Reveal>
-      </div>
-    </section>
-  )
-}
-
-function Approach() {
-  const items = [
-    {
-      num: '01',
-      title: 'Clarify what matters',
-      body: 'We start with personal and professional priorities so attention goes to the few things that truly move you forward.',
-    },
-    {
-      num: '02',
-      title: 'Build the strategic plan',
-      body: 'Translate clarity into a practical path: focused choices, sequenced steps, and a plan you can follow with confidence.',
-    },
-    {
-      num: '03',
-      title: 'Stay the course',
-      body: 'Keep momentum with steady review and adjustment, so the plan stays alive as life and work evolve.',
-    },
-  ]
-
-  return (
-    <section className="section section--muted" id="approach">
-      <div className="container">
-        <Reveal>
-          <p className="section__eyebrow">Focus</p>
-          <h2 className="section__title">How we get there</h2>
-          <p className="section__lede">
-            From clarity to a strategic plan: a calm path for brands and high-achieving individuals who
-            want less noise and more direction.
-          </p>
-        </Reveal>
-        <ul className="approach__list">
-          {items.map((item, index) => (
-            <Reveal as="li" className="approach__item" key={item.num} style={{ transitionDelay: `${index * 80}ms` }}>
-              <span className="approach__num">{item.num}</span>
-              <h3>{item.title}</h3>
-              <p>{item.body}</p>
-            </Reveal>
-          ))}
-        </ul>
       </div>
     </section>
   )
@@ -320,7 +271,6 @@ export default function App() {
       <main>
         <Hero />
         <About />
-        <Approach />
         <Testimonials />
         <Contact />
       </main>

@@ -175,10 +175,10 @@ textarea {
 /* ——— Hero ——— */
 .hero {
   position: relative;
-  min-height: 100svh;
+  min-height: 88svh;
   display: flex;
   align-items: flex-end;
-  padding: 7.5rem 0 5.5rem;
+  padding: 6.25rem 0 4.25rem;
   isolation: isolate;
 }
 
@@ -236,11 +236,11 @@ textarea {
 }
 
 .hero__brand {
-  margin: 0 0 1.35rem;
+  margin: 0 0 0.45rem;
   font-family: var(--font-display);
   font-size: clamp(3.1rem, 9vw, 5.6rem);
   font-weight: 600;
-  line-height: 0.95;
+  line-height: 0.92;
   letter-spacing: -0.035em;
   color: var(--ink);
   opacity: 0;
@@ -249,7 +249,7 @@ textarea {
 }
 
 .hero__headline {
-  margin: 0 0 1rem;
+  margin: 0 0 0.85rem;
   font-family: var(--font-display);
   font-size: clamp(1.55rem, 3.4vw, 2.15rem);
   font-weight: 500;
@@ -411,45 +411,6 @@ textarea {
   margin: 0;
   color: var(--muted);
   line-height: 1.65;
-}
-
-/* ——— Approach ——— */
-.approach__list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
-  margin: 3rem 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.approach__item {
-  padding-top: 1.35rem;
-  border-top: 1px solid var(--line);
-}
-
-.approach__num {
-  display: block;
-  margin-bottom: 0.85rem;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: var(--accent);
-}
-
-.approach__item h3 {
-  margin: 0 0 0.65rem;
-  font-family: var(--font-display);
-  font-size: 1.4rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-}
-
-.approach__item p {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.65;
-  font-size: 0.98rem;
 }
 
 /* ——— Testimonials ——— */
@@ -691,11 +652,6 @@ textarea {
     gap: 2.25rem;
   }
 
-  .approach__list {
-    grid-template-columns: 1fr;
-    gap: 1.75rem;
-  }
-
   .testimonials__grid {
     grid-template-columns: 1fr;
   }
@@ -743,8 +699,8 @@ textarea {
   }
 
   .hero {
-    padding: 6.5rem 0 4rem;
-    min-height: 92svh;
+    padding: 5.5rem 0 3.25rem;
+    min-height: 82svh;
     align-items: center;
   }
 
