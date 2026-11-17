@@ -292,7 +292,7 @@ function Contact() {
               Message
               <textarea name="message" placeholder="What are you working on?" required />
             </label>
-            <button className="btn btn--light" type="submit">
+            <button className="btn btn--primary" type="submit">
               Send message
             </button>
             <p className="contact__note">
