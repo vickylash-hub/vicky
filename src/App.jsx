@@ -128,22 +128,29 @@ function About() {
         <Reveal className="about__copy">
           <p className="section__eyebrow">About</p>
           <h2 className="section__title">Who I am</h2>
-          <p>
-            Researcher, lifelong learner, and consultant for brands and high-achieving individuals. I help
-            you gain clarity on what truly matters in your personal and professional life, and build the
-            strategic plan to get there.
-          </p>
-          <p>
-            This site is a quiet home base: a place to meet the person behind the name, understand the
-            work, and begin a conversation when you are ready.
-          </p>
+          <div className="about__body">
+            <p>
+              Researcher, lifelong learner, and consultant for brands and high-achieving individuals. I
+              help you gain clarity on what truly matters in your personal and professional life, and
+              build the strategic plan to get there.
+            </p>
+            <p>
+              This site is a quiet home base: a place to meet the person behind the name, understand the
+              work, and begin a conversation when you are ready.
+            </p>
+          </div>
         </Reveal>
         <Reveal className="about__aside" as="aside">
-          <h2 className="section__title">What guides me</h2>
-          <p>
-            Curiosity, clear thinking, and a steady focus on outcomes that matter, for people and for
-            brands who want a plan they can actually follow.
+          <p className="section__eyebrow about__eyebrow-spacer" aria-hidden="true">
+            About
           </p>
+          <h2 className="section__title">What guides me</h2>
+          <div className="about__body">
+            <p>
+              Curiosity, clear thinking, and a steady focus on outcomes that matter, for people and for
+              brands who want a plan they can actually follow.
+            </p>
+          </div>
         </Reveal>
       </div>
     </section>
@@ -151,7 +158,21 @@ function About() {
 }
 
 function Testimonials() {
-  const [featured, ...rest] = testimonials
+  const [active, setActive] = useState(0)
+  const [paused, setPaused] = useState(false)
+  const total = testimonials.length
+  const current = testimonials[active]
+
+  useEffect(() => {
+    if (paused || total < 2) return undefined
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined
+
+    const id = window.setInterval(() => {
+      setActive((index) => (index + 1) % total)
+    }, 5500)
+
+    return () => window.clearInterval(id)
+  }, [paused, total])
 
   return (
     <section className="section" id="testimonials">
@@ -164,30 +185,41 @@ function Testimonials() {
           </p>
         </Reveal>
 
-        <div className="testimonials__grid">
-          <Reveal as="blockquote" className="testimonial testimonial--featured">
-            <p className="testimonial__quote">“{featured.quote}”</p>
-            <footer className="testimonial__footer">
-              <cite className="testimonial__name">{featured.name}</cite>
-              <span className="testimonial__role">{featured.attribution}</span>
-            </footer>
-          </Reveal>
+        <Reveal>
+          <div
+            className="testimonials__carousel"
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+            onFocusCapture={() => setPaused(true)}
+            onBlurCapture={(event) => {
+              if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false)
+            }}
+          >
+            <div className="testimonials__viewport" aria-live="polite" aria-atomic="true">
+              <blockquote className="testimonial" key={current.name}>
+                <p className="testimonial__quote">“{current.quote}”</p>
+                <footer className="testimonial__footer">
+                  <cite className="testimonial__name">{current.name}</cite>
+                  <span className="testimonial__role">{current.attribution}</span>
+                </footer>
+              </blockquote>
+            </div>
 
-          {rest.map((item, index) => (
-            <Reveal
-              as="blockquote"
-              className="testimonial"
-              key={item.name}
-              style={{ transitionDelay: `${(index + 1) * 70}ms` }}
-            >
-              <p className="testimonial__quote">“{item.quote}”</p>
-              <footer className="testimonial__footer">
-                <cite className="testimonial__name">{item.name}</cite>
-                <span className="testimonial__role">{item.attribution}</span>
-              </footer>
-            </Reveal>
-          ))}
-        </div>
+            <div className="testimonials__dots" role="tablist" aria-label="Testimonials">
+              {testimonials.map((item, index) => (
+                <button
+                  key={item.name}
+                  type="button"
+                  role="tab"
+                  className={`testimonials__dot${index === active ? ' is-active' : ''}`}
+                  aria-selected={index === active}
+                  aria-label={`Show testimonial from ${item.name}`}
+                  onClick={() => setActive(index)}
+                />
+              ))}
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   )
