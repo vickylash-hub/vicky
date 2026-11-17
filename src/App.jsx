@@ -237,17 +237,6 @@ function Testimonials() {
             </Reveal>
           ))}
         </div>
-
-        <p className="testimonials__source">
-          Source:{' '}
-          <a
-            href="https://web.archive.org/web/20191208175338/https://www.vickylashenko.com/about/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Wayback Machine archive of vickylashenko.com/about (Dec 8, 2019)
-          </a>
-        </p>
       </div>
     </section>
   )

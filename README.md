@@ -21,4 +21,4 @@ npm run preview
 ## Notes
 
 - Contact email placeholder: edit `CONTACT_EMAIL` in `src/App.jsx`
-- Testimonials: `src/data/testimonials.js` (sourced from Wayback Machine About page, Dec 2019)
+- Testimonials: `src/data/testimonials.js`

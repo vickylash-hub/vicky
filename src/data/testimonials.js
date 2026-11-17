@@ -1,8 +1,6 @@
 /**
- * Testimonials based on the Wayback Machine capture of
- * https://www.vickylashenko.com/about/ (2019-12-08).
- * Source: https://web.archive.org/web/20191208175338/https://www.vickylashenko.com/about/
- * Tool-specific product names lightly trimmed per site owner request; remaining wording kept intact.
+ * Client testimonials provided by the site owner.
+ * Tool-specific product names lightly trimmed per request; remaining wording kept intact.
  */
 export const testimonials = [
   {
