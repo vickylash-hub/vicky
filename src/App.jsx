@@ -209,7 +209,7 @@ function Contact() {
     <section className="contact" id="contact">
       <div className="contact__bg" aria-hidden="true" />
       <div className="container contact__inner">
-        <Reveal>
+        <Reveal className="contact__copy">
           <p className="section__eyebrow">Contact</p>
           <h2 className="section__title">Let’s talk about what matters</h2>
           <p className="section__lede">
@@ -217,7 +217,7 @@ function Contact() {
             below when you are ready for the real inbox.
           </p>
         </Reveal>
-        <Reveal>
+        <Reveal className="contact__form-wrap">
           <form className="contact__form" onSubmit={handleSubmit}>
             <label>
               Name
@@ -250,7 +250,6 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="container footer__inner">
-        <span className="footer__brand">Vicky Lashenko</span>
         <span>vickylashenko.com · © {year}</span>
       </div>
     </footer>
