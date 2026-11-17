@@ -139,7 +139,7 @@ function About() {
           </p>
         </Reveal>
         <Reveal className="about__aside" as="aside">
-          <h3>What guides me</h3>
+          <h2 className="section__title">What guides me</h2>
           <p>
             Curiosity, clear thinking, and a steady focus on outcomes that matter, for people and for
             brands who want a plan they can actually follow.

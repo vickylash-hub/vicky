@@ -379,38 +379,32 @@ textarea {
 /* ——— About ——— */
 .about__grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1fr 1fr;
   gap: 3.5rem;
   align-items: start;
 }
 
-.about__copy p {
+.about__copy p,
+.about__aside p {
   margin: 0 0 1.15rem;
   font-size: 1.05rem;
   line-height: 1.75;
   color: var(--ink-soft);
 }
 
-.about__copy p:last-child {
+.about__copy p:last-child,
+.about__aside p:last-child {
   margin-bottom: 0;
 }
 
 .about__aside {
-  padding: 2rem 0 0;
-  border-top: 1px solid var(--line);
+  min-width: 0;
+  /* Match left column: eyebrow line + its bottom margin so titles sit level */
+  padding-top: calc(0.78em * 1.35 + 0.75rem);
 }
 
-.about__aside h3 {
-  margin: 0 0 0.65rem;
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 600;
-}
-
-.about__aside p {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.65;
+.about__aside .section__title {
+  max-width: none;
 }
 
 /* ——— Testimonials ——— */
@@ -650,6 +644,10 @@ textarea {
   .contact__inner {
     grid-template-columns: 1fr;
     gap: 2.25rem;
+  }
+
+  .about__aside {
+    padding-top: 0;
   }
 
   .testimonials__grid {
