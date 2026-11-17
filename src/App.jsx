@@ -234,10 +234,6 @@ function Contact() {
             <button className="btn btn--primary" type="submit">
               Send message
             </button>
-            <p className="contact__note">
-              Form stub opens your mail client. Change <code>{CONTACT_EMAIL}</code> in the site code when
-              you have the address you want.
-            </p>
             <p className="contact__mailto">
               Or email directly:{' '}
               <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>

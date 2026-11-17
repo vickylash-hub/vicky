@@ -551,12 +551,6 @@ textarea {
   resize: vertical;
 }
 
-.contact__note {
-  margin: 0.35rem 0 0;
-  font-size: 0.8rem;
-  color: var(--muted);
-}
-
 .contact__mailto {
   margin-top: 0.75rem;
   font-size: 0.9rem;
